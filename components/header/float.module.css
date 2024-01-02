@@ -1,0 +1,72 @@
+.main {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100vw;
+  height: 100px;
+  padding: 10px 30px;
+  position: fixed;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.27);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(7.8px);
+  -webkit-backdrop-filter: blur(7.8px);
+  transition: 0.5s;
+  transform: translateY(-100px) !important;
+}
+
+.mainNot {
+  transform: translateY(-200px) !important;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.main img {
+  height: 70px;
+  justify-self: flex-star;
+  place-self: flex-end;
+}
+
+.main div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-self: center;
+}
+
+.main a {
+  cursor: pointer;
+  font-size: 20px;
+  color: #000000;
+  margin: 0px 20px;
+  display: flex;
+  align-items: center;
+}
+
+.main div img {
+  height: 100% !important;
+  margin-right: 10px;
+  filter: #000;
+}
+
+.specialButton {
+  background-color: #404040;
+  padding: 10px 20px;
+  line-height: 20px;
+  transition: 0.5s;
+  color: #fff !important;
+}
+
+.specialButton:hover {
+  transition: 0.5s;
+  background-color: #d3d3d3;
+  color: #000 !important;
+}
+
+@media only screen and (max-width: 600px) {
+  .main {
+    display: none;
+  }
+}
