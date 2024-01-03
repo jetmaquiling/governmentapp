@@ -8,10 +8,13 @@ export default function SectionFour() {
     <>
       <section id="aboutus" className={`${style.sectionThree}`}>
         <div className={`${style.sectionThree_gallery}`}>
-          <div style={{ width: "50%" }} className={`${style.image_corner}`}>
+          <div className={`${style.contact_image}`} style={{ width: "50%" }}>
             <img style={{ width: "100%" }} src="/contact.jpg" />
           </div>
-          <div style={{ width: "50%", padding: "30px", textAlign: "left" }}>
+          <div
+            className={`${style.contact_side}`}
+            style={{ width: "50%", padding: "30px", textAlign: "left" }}
+          >
             <h4>Contact Us</h4>
             <p>
               As a representative of the Department of Foreign Affairs, please
@@ -22,9 +25,12 @@ export default function SectionFour() {
               assistance.
             </p>
             <div className={`${style.button_container}`}>
-              <a href="/">+092323892332</a>
-              <a href="/register" className={`${style.specialButton}`}>
-                Call Now
+              <a href="tel:123-456-7890">+092323892332</a>
+              <a
+                href="mailto: abc@example.com"
+                className={`${style.specialButton}`}
+              >
+                customer_service@dfa_office.gov
               </a>
             </div>
           </div>

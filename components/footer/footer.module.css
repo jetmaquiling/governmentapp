@@ -13,11 +13,25 @@
 }
 
 .main span {
+  text-align: center;
   margin-top: 50px;
 }
 
-@media only screen and (max-width: 600px) {
-  .main {
-    display: none;
+@media only screen and (max-width: 1000px) {
+  .main img {
+    width: 30%;
+    margin: 50px 0px;
   }
+
+  .main {
+    height: 100%;
+  }
+
+  .main span {
+    margin: 10px 10px;
+    font-size: 10px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
 }

@@ -47,50 +47,49 @@ export default function Passport() {
     // Using regex to validate inputs
     const regex = /^[A-Z][a-zA-Z\s]*$/;
 
-
-
     // Validate First Name
     if (!firstNameValue) {
-      firstNameLabel.innerHTML = "First Name <span style='color: red;'>*(Required)</span>";
+      firstNameLabel.innerHTML =
+        "First Name <span style='color: red;'>*(Required)</span>";
       isValid = false;
-    }
-    else if (!regex.test(firstNameValue)) {
-      firstNameLabel.innerHTML = "First Name <span style='color: red;'>*(Invalid Input)</span>";
+    } else if (!regex.test(firstNameValue)) {
+      firstNameLabel.innerHTML =
+        "First Name <span style='color: red;'>*(Invalid Input)</span>";
       isValid = false;
-    }
-    else {
+    } else {
       firstNameLabel.innerHTML = "First Name";
     }
 
     // Validate Last Name
     if (!lastNameValue) {
-      lastNameLabel.innerHTML = "Last Name <span style='color: red;'>*(Required)</span>";
+      lastNameLabel.innerHTML =
+        "Last Name <span style='color: red;'>*(Required)</span>";
       isValid = false;
-    }
-    else if (!regex.test(lastNameValue)) {
-      lastNameLabel.innerHTML = "Last Name <span style='color: red;'>*(Invalid Input)</span>";
+    } else if (!regex.test(lastNameValue)) {
+      lastNameLabel.innerHTML =
+        "Last Name <span style='color: red;'>*(Invalid Input)</span>";
       isValid = false;
-    }
-    else {
+    } else {
       lastNameLabel.innerHTML = "Last Name";
     }
 
     // Validate Middle Name
     if (!middleNameValue) {
-      middleNameLabel.innerHTML = "Middle Name <span style='color: red;'>*(Required)</span>";
+      middleNameLabel.innerHTML =
+        "Middle Name <span style='color: red;'>*(Required)</span>";
       isValid = false;
-    }
-    else if (!regex.test(middleNameValue)) {
-      middleNameLabel.innerHTML = "Middle Name <span style='color: red;'>*(Invalid Input)</span>";
+    } else if (!regex.test(middleNameValue)) {
+      middleNameLabel.innerHTML =
+        "Middle Name <span style='color: red;'>*(Invalid Input)</span>";
       isValid = false;
-    }
-    else {
+    } else {
       middleNameLabel.innerHTML = "Middle Name";
     }
 
     // Validate Birthdate
     if (!birthdateValue) {
-      birthdateLabel.innerHTML = "Birthdate <span style='color: red;'>*(Required)</span>";
+      birthdateLabel.innerHTML =
+        "Birthdate <span style='color: red;'>*(Required)</span>";
       isValid = false;
     } else {
       birthdateLabel.innerHTML = "Birthdate";
@@ -98,14 +97,14 @@ export default function Passport() {
 
     // Validate Address
     if (!addressValue) {
-      addressLabel.innerHTML = "Address <span style='color: red;'>*(Required)</span>";
+      addressLabel.innerHTML =
+        "Address <span style='color: red;'>*(Required)</span>";
       isValid = false;
-    }
-    else if (!regex.test(addressValue)) {
-      addressLabel.innerHTML = "Address <span style='color: red;'>*(Invalid Input)</span>";
+    } else if (!regex.test(addressValue)) {
+      addressLabel.innerHTML =
+        "Address <span style='color: red;'>*(Invalid Input)</span>";
       isValid = false;
-    }
-    else {
+    } else {
       addressLabel.innerHTML = "Address";
     }
 
@@ -113,37 +112,35 @@ export default function Passport() {
     if (!cityValue) {
       cityLabel.innerHTML = "City <span style='color: red;'>*(Required)</span>";
       isValid = false;
-    }
-    else if (!regex.test(cityValue)) {
-      cityLabel.innerHTML = "City <span style='color: red;'>*(Invalid Input)</span>";
+    } else if (!regex.test(cityValue)) {
+      cityLabel.innerHTML =
+        "City <span style='color: red;'>*(Invalid Input)</span>";
       isValid = false;
-    }
-    else {
+    } else {
       cityLabel.innerHTML = "City";
     }
 
     // Validate Province
     if (!provinceValue) {
-      provinceLabel.innerHTML = "Province <span style='color: red;'>*(Required)</span>";
+      provinceLabel.innerHTML =
+        "Province <span style='color: red;'>*(Required)</span>";
       isValid = false;
     } else if (!regex.test(provinceValue)) {
-      provinceLabel.innerHTML = "Province <span style='color: red;'>*(Invalid Input)</span>";
+      provinceLabel.innerHTML =
+        "Province <span style='color: red;'>*(Invalid Input)</span>";
       isValid = false;
-    }
-    else {
+    } else {
       provinceLabel.innerHTML = "Province";
     }
 
     // Validate DFA Office
     if (!dfaOfficeValue) {
-      dfaOfficeLabel.innerHTML = "Branch <span style='color: red;'>*(Required)</span>";
+      dfaOfficeLabel.innerHTML =
+        "Branch <span style='color: red;'>*(Required)</span>";
       isValid = false;
-    }
-    else {
+    } else {
       dfaOfficeLabel.innerHTML = "Branch";
     }
-
-
 
     if (isValid) {
       window.location.href = "/register";
@@ -169,15 +166,27 @@ export default function Passport() {
             <div>
               <div style={{ width: "45%" }}>
                 <label htmlFor="firstName">First Name</label>
-                <input id="firstName" placeholder="Juan" style={{ width: "100%" }} />
+                <input
+                  id="firstName"
+                  placeholder="Juan"
+                  style={{ width: "100%" }}
+                />
               </div>
               <div style={{ width: "45%" }}>
                 <label htmlFor="lastName">Last Name</label>
-                <input id="lastName" placeholder="Dela Cruz" style={{ width: "100%" }} />
+                <input
+                  id="lastName"
+                  placeholder="Dela Cruz"
+                  style={{ width: "100%" }}
+                />
               </div>
               <div style={{ width: "45%" }}>
                 <label htmlFor="middleName">Middle Name</label>
-                <input id="middleName" placeholder="Mark" style={{ width: "100%" }} />
+                <input
+                  id="middleName"
+                  placeholder="Mark"
+                  style={{ width: "100%" }}
+                />
               </div>
               <div style={{ width: "45%" }}>
                 <label htmlFor="birthdate">Birthdate</label>
@@ -200,7 +209,11 @@ export default function Passport() {
               </div>
               <div style={{ width: "45%" }}>
                 <label htmlFor="province">Province</label>
-                <input id="province" placeholder="Province" style={{ width: "100%" }} />
+                <input
+                  id="province"
+                  placeholder="Province"
+                  style={{ width: "100%" }}
+                />
               </div>
             </div>
 
@@ -253,5 +266,3 @@ export default function Passport() {
     </>
   );
 }
-
-

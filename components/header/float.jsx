@@ -7,6 +7,7 @@ import { useEffect, useState } from "react";
 
 export default function FloatHeader() {
   const [pos, setPos] = useState("top");
+  const [open, setOpen] = useState(true);
 
   useEffect(() => {
     document.addEventListener("scroll", (e) => {
@@ -34,6 +35,41 @@ export default function FloatHeader() {
           Apply For Passport
         </a>
       </div>
+
+      <button
+        onClick={() => {
+          setOpen(!open);
+        }}
+      >
+        <img className={`${styles.menu}`} src={"/" + "menu.svg"} />
+      </button>
+
+      <section className={`${open ? styles.open : ""}`}>
+        <button
+          onClick={() => {
+            setOpen(!open);
+          }}
+        >
+          <img className={`${styles.menu}`} src={"/" + "cancel.svg"} />
+        </button>
+        <a style={{ marginBottom: "20px" }} href="/">
+          <img src={"/" + "logo-header.png"} />
+        </a>
+        <a
+          style={{ marginBottom: "20px" }}
+          className={`${styles.specialButton}`}
+          href="/passport"
+        >
+          Apply For Passport
+        </a>
+        <a style={{ marginBottom: "20px" }} href="/contact">
+          Contact Us
+        </a>
+        <a style={{ marginBottom: "20px" }} href="/#values">
+          Our Values
+        </a>
+        <a href="/#services">Services</a>
+      </section>
     </header>
   );
 }
