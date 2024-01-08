@@ -6,7 +6,7 @@ import localFont from "next/font/local";
 import { useEffect, useState } from "react";
 
 export default function Header() {
-  const [open, setOpen] = useState(true);
+  const [open, setOpen] = useState(false);
   return (
     <header className={`${styles.main}`}>
       <a href="/">
@@ -44,14 +44,17 @@ export default function Header() {
         <a
           style={{ marginBottom: "20px" }}
           className={`${styles.specialButton}`}
+          onClick={() => {
+            setOpen(!open);
+          }}
           href="/passport"
         >
           Apply For Passport
         </a>
-        <a style={{ marginBottom: "20px" }} href="/contact">
+        <a style={{ marginBottom: "20px" }} href="/contact" onClick={() => {setOpen(!open)}}>
           Contact Us
         </a>
-        <a style={{ marginBottom: "20px" }} href="/#values">
+        <a style={{ marginBottom: "20px" }} href="/#values" onClick={() => {setOpen(!open)}}>
           Our Values
         </a>
         <a href="/#services">Services</a>

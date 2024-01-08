@@ -100,13 +100,14 @@ export default function Passport() {
       addressLabel.innerHTML =
         "Address <span style='color: red;'>*(Required)</span>";
       isValid = false;
-    } else if (!regex.test(addressValue)) {
-      addressLabel.innerHTML =
-        "Address <span style='color: red;'>*(Invalid Input)</span>";
-      isValid = false;
-    } else {
-      addressLabel.innerHTML = "Address";
-    }
+    } 
+    // else if (!regex.test(addressValue)) {
+    //   addressLabel.innerHTML =
+    //     "Address <span style='color: red;'>*(Invalid Input)</span>";
+    //   isValid = false;
+    // } else {
+    //   addressLabel.innerHTML = "Address";
+    // }
 
     // Validate City
     if (!cityValue) {
@@ -143,7 +144,9 @@ export default function Passport() {
     }
 
     if (isValid) {
-      window.location.href = "/register";
+      if (window.confirm("Do you want to confirm the registration?")) {
+        window.location.href = "/register";
+      }
     }
   };
 
